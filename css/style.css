@@ -1,0 +1,198 @@
+/* Variables */
+:root {
+  --clr-primary-bg: hsl(233, 47%, 7%);
+  --clr-primary-cardbg: hsl(244, 38%, 16%);
+  --clr-accent: hsl(277, 64%, 61%);
+  --clr-neutral-700: hsl(0, 0%, 100%);
+  --clr-neutral-p: hsla(0, 0%, 100%, 0.75);
+  --clr-neutral-stat-heading: hsla(0, 0%, 100%, 0.6);
+
+  --ff-primary: "Inter", sans-serif;
+  --ff-header: var(--ff-primary);
+  --ff-body: var(--ff-primary);
+  --ff-stat: var(--ff-primary);
+  --ff-stat-heading: "Lexend Deca", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin/padding, apply root font for everything */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ----------------------------------------- */
+
+.center-container {
+  display: grid;
+  min-height: 100%;
+  font-family: var(--ff-body);
+  place-content: center;
+  /* display: flex;
+  min-height: 100%;
+  justify-content: center;
+  align-items: center; */
+  background-color: var(--clr-primary-bg);
+  /* desktop */
+  /* grid-template-columns: repeat(2, 300px); */
+  /* grid-template-areas: "b a"; */
+  /* mobile */
+  /* width: 100%; */
+  /* grid-template-columns: 260px;
+  grid-template-areas:
+    "a"
+    "b"
+    "c"; */
+  /* gap: 16px; */
+  /* background-color: var(--clr-primary-cardbg); */
+}
+.card-container {
+  display: grid;
+  /* desktop */
+  /* grid-template-columns: repeat(2, 300px); */
+  /* grid-template-areas: "b a"; */
+  /* mobile */
+
+  /* width: fit-content; */
+  grid-template-columns: 260px;
+  grid-template-areas:
+    "a"
+    "b"
+    "c";
+  /* gap: 16px; */
+  /* font-family: var(--ff-body); */
+  /* background-color: var(--clr-primary-bg); */
+  background-color: var(--clr-primary-cardbg);
+  /* place-content: center; */
+  /* border: 2px solid black; */
+  /* width: 100%;
+  height: 100%; */
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.grid-item:nth-child(1) {
+  grid-area: a;
+}
+.grid-item:nth-child(2) {
+  grid-area: b;
+}
+.grid-item:nth-child(3) {
+  grid-area: c;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* .img-container {
+  background-color: var(--clr-accent);
+} */
+.card-img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  opacity: 1;
+}
+.card-info {
+  padding: 26px;
+  gap: 16px;
+  font-size: 12px;
+  font-family: var(--ff-body);
+}
+.card-title,
+.card-stats-item > span {
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-700);
+}
+.card-title {
+  font-size: 22px;
+  line-height: 1.2;
+}
+.card-title > span {
+  color: var(--clr-accent);
+}
+.card-description {
+  color: var(--clr-neutral-p);
+}
+.card-stats {
+  color: var(--clr-neutral-stat-heading);
+  gap: 26px;
+  font-family: var(--ff-stat-heading);
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-bottom: 26px;
+}
+.card-stats-item > span {
+  display: block;
+  font-family: var(--ff-stat);
+  font-size: 18px;
+}
+.card-stats-item:first-child > span {
+  text-transform: none;
+}

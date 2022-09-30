@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mentor | Stats preview card component</title>
+  </head>
+  <body>
+    <main class="center-container">
+      <section class="card-container">
+        <article class="img-container grid-item">
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="./images/image-header-desktop.jpg"
+            />
+            <source srcset="./images/image-header-mobile.jpg" />
+            <img
+              src="./images/image-header-mobile.jpg"
+              alt=""
+              class="card-img"
+            />
+          </picture>
+        </article>
+        <article class="card-info grid-item flex-container">
+          <h1 class="card-title">
+            Get <span>insights</span> that help your business grow.
+          </h1>
+          <p class="card-description">
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+        </article>
+        <article class="card-stats grid-item flex-container">
+          <p class="card-stats-item"><span>10k+</span> companies</p>
+          <p class="card-stats-item"><span>314</span> templates</p>
+          <p class="card-stats-item"><span>12m+</span> queries</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
