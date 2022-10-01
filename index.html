@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&family=Lexend+Deca&display=swap"
       rel="stylesheet"
     />
     <link
@@ -22,8 +22,8 @@
   <body>
     <main class="center-container">
       <section class="card-container">
-        <article class="img-container grid-item">
-          <picture>
+        <article class="grid-item">
+          <picture class="img-container">
             <source
               media="(min-width: 768px)"
               srcset="./images/image-header-desktop.jpg"
@@ -46,9 +46,15 @@
           </p>
         </article>
         <article class="card-stats grid-item flex-container">
-          <p class="card-stats-item"><span>10k+</span> companies</p>
-          <p class="card-stats-item"><span>314</span> templates</p>
-          <p class="card-stats-item"><span>12m+</span> queries</p>
+          <p class="card-stats-item">
+            <span id="num-of-companies">10k+</span> companies
+          </p>
+          <p class="card-stats-item">
+            <span id="num-of-templates">314</span> templates
+          </p>
+          <p class="card-stats-item">
+            <span id="num-of-queries">12m+</span> queries
+          </p>
         </article>
       </section>
     </main>
