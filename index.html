@@ -22,20 +22,16 @@
   <body>
     <main class="center-container">
       <section class="card-container">
-        <article class="grid-item">
-          <picture class="img-container">
-            <source
-              media="(min-width: 768px)"
-              srcset="./images/image-header-desktop.jpg"
-            />
-            <source srcset="./images/image-header-mobile.jpg" />
-            <img
-              src="./images/image-header-mobile.jpg"
-              alt=""
-              class="card-img"
-            />
-          </picture>
-        </article>
+        <picture class="img-container grid-item">
+          <source
+            media="(min-width: 768px)"
+            srcset="./images/image-header-desktop.jpg"
+          />
+          <source srcset="./images/image-header-mobile.jpg" />
+          <img src="./images/image-header-mobile.jpg" alt="" class="card-img" />
+        </picture>
+        <!-- <article class="grid-item">
+        </article> -->
         <article class="card-info grid-item flex-container">
           <h1 class="card-title">
             Get <span>insights</span> that help your business grow.

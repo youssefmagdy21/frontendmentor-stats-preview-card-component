@@ -160,8 +160,19 @@ canvas {
   border-top-right-radius: 5px;
   /* background-color: var(--clr-accent); */
 }
-.card-img {
-  opacity: 1;
+.img-container {
+  position: relative;
+}
+.img-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(277, 88%, 27%);
+  /* background-color: var(--clr-accent); */
+  opacity: 0.5;
 }
 .card-info {
   padding: 26px;
